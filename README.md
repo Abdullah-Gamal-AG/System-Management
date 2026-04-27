@@ -137,18 +137,12 @@ dotnet publish systemManagement.csproj -c Release -r win-x64 --self-contained fa
 
 This project uses Inno Setup Compiler to generate a Windows installer from the release output.
 
-If Inno Setup is installed, you can compile the setup script with:
-
-```powershell
-iscc .\bin\Release\setup.iss
-```
-
 ## Notes
 
 - The SQLite database file is created under the app runtime output directory, not in source root.
 - Product images under `img/` are copied to output (`PreserveNewest`) by the project file.
 - A SQL script is also available at `db.sql` for reference/manual setup workflows.
-- Installer packaging is done with Inno Setup Compiler using `bin/Release/setup.iss`.
+- Installer packaging is done with Inno Setup Compiler.
 
 ## Dependencies
 
